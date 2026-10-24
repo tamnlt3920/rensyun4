@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f6f2" />
+  <meta name="description" content="NAT-TEST 4Q 日本語試験 — Thi thử tiếng Nhật trình độ N4." />
+  <meta name="color-scheme" content="light" />
+  <title>NAT-TEST 4Q</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23216c52'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-size='25' fill='white'%3E日%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">日</span>
+        <span>NAT-TEST <span class="brand-light">4Q</span></span>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="page" id="homeView" aria-labelledby="homeTitle">
+        <div class="entry-panel">
+          <div class="entry-mark" aria-hidden="true">日</div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> 日本語能力試験</p>
+          <h1 id="homeTitle">NAT-TEST <span>4Q</span></h1>
+          <button class="button primary entry-start" id="startExam" type="button">START <span aria-hidden="true">→</span></button>
+          <div class="entry-structure" aria-label="試験の構成">
+            <div><b>文字・語彙</b><span>28問 · 25分</span></div>
+            <div><b>文法・読解</b><span>29問 · 55分</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exam-view hidden" id="examView" aria-label="試験">
+        <header class="exam-bar">
+          <div class="exam-bar-title">
+            <button class="back-button" id="backHome" type="button" aria-label="試験を終了してホームへ戻る">←</button>
+            <h1 id="examTitle">NAT-TEST 4Q</h1>
+          </div>
+          <div class="timer-box" role="timer"><span class="timer-caption">残り時間</span><strong id="timer">25:00</strong></div>
+        </header>
+        <div class="section-switch">
+          <div class="section-name"><span class="section-marker" id="sectionMarker">01</span><h2 id="sectionTitle" aria-live="polite">文字・語彙</h2></div>
+          <div class="section-count"><span id="sectionProgress">0 / 28問</span><div class="section-track" aria-hidden="true"><span id="sectionBar"></span></div></div>
+        </div>
+        <div class="exam-layout">
+          <section class="question-card" aria-label="問題">
+            <div class="question-header"><span id="questionNumber">28問</span></div>
+            <div id="questionContent"></div>
+            <div class="exam-controls"><span class="submit-reminder">解答を確認してから提出してください。</span><button class="button primary" id="submitSection" type="button">この部分を提出</button></div>
+          </section>
+          <aside class="answer-sheet" aria-label="解答用紙">
+            <div class="sheet-heading"><div><span class="mini-label">解答用紙</span><h3>解答状況</h3></div><span class="sheet-mark" aria-hidden="true">問</span></div>
+            <div class="sheet-legend"><span><i class="legend-dot done"></i>解答済み</span><span><i class="legend-dot"></i>未解答</span></div>
+            <div class="answer-grid" id="answerGrid"></div>
+            <div class="sheet-summary"><div><span>解答済み</span><b id="answeredCount">0</b></div><div><span>未解答</span><b id="unansweredCount">28</b></div></div>
+            <button class="button submit-button" id="submitSectionSide" type="button">提出</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="result-view hidden" id="resultView" aria-labelledby="resultTitle">
+        <div class="result-hero">
+          <h1 id="resultTitle">採点結果</h1><p id="resultSubtitle" class="hidden"></p>
+          <div class="result-summary">
+            <div class="score-ring"><strong id="scorePercent">0%</strong><span>正解</span></div>
+            <div class="result-details"><div><span>正解数</span><b id="scoreFraction">0 / 57問</b></div><div><span>所要時間</span><b id="elapsedTime">00:00</b></div><div><span>分野別</span><b id="sectionScores">文字・語彙 · 文法 · 読解</b></div></div>
+            <button class="button primary" id="resultHome" type="button">トップへ戻る <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <div class="review-heading"><div><span class="mini-label">解答確認</span><h2>問題と解説</h2></div><label class="filter-label">表示<select id="reviewFilter" aria-label="解答を絞り込む"><option value="all">すべて</option><option value="wrong">不正解</option><option value="correct">正解</option><option value="blank">未回答</option></select></label></div>
+        <div id="reviewList" class="review-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="confirm-modal hidden" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><div class="modal-glyph" aria-hidden="true">?</div><h2 id="modalTitle">提出しますか。</h2><p id="modalMessage">未回答の問題があります。提出すると解答を変更できません。</p><div class="modal-actions"><button class="button secondary" id="cancelSubmit" type="button">戻る</button><button class="button primary" id="confirmSubmit" type="button">提出</button></div></div>
+  </div>
+  <script src="data/han-nichi-vocabulary-ja.js"></script>
+  <script src="data/han-nichi-applied-grammar.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

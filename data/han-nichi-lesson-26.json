@@ -1,0 +1,48 @@
+{
+  "source": {
+    "site": "Han-Nichi",
+    "url": "https://han-nichi.vercel.app/grammar/minna-2-n4/lesson-26",
+    "pageTitle": "みんなの日本語 II ・ 第26課",
+    "lesson": 26,
+    "declaredScope": "Minna no Nihongo II, grammar lessons 26–50; described by the page as elementary-to-lower-intermediate material equivalent to JLPT N4"
+  },
+  "grammar": [
+    {
+      "title": "〜んです・〜のです",
+      "glossVi": "Dùng để giải thích nguyên nhân hoặc hoàn cảnh, nhấn mạnh thông tin nền; tùy ngữ cảnh có thể hiểu như ‘thực ra là’ hoặc ‘chuyện là’. ",
+      "forms": ["V普通形 + んです", "Aい普通形 + んです", "Na + な + んです", "N + な + んです"],
+      "usageNotes": [
+        "〜んです là dạng hội thoại phổ biến của 〜のです.",
+        "Có thể dùng để hỏi lời giải thích về điều người nói nhận thấy.",
+        "Danh từ và tính từ な ở hiện tại khẳng định nối bằng な trước んです."
+      ],
+      "sourceUrl": "https://han-nichi.vercel.app/grammar/minna-2-n4/lesson-26"
+    },
+    {
+      "title": "〜ていただけませんか",
+      "glossVi": "Lời nhờ vả lịch sự, khiêm nhường: hỏi người nghe có thể vui lòng làm giúp việc gì không.",
+      "forms": ["Vて + いただけませんか"],
+      "usageNotes": [
+        "Dùng khi muốn nhờ người nghe thực hiện một hành động.",
+        "Trang đối chiếu mẫu này với 〜てください và 〜てもらえませんか, đồng thời nêu sắc thái lịch sự hơn."
+      ],
+      "sourceUrl": "https://han-nichi.vercel.app/grammar/minna-2-n4/lesson-26"
+    },
+    {
+      "title": "〜たらいい・〜といい",
+      "glossVi": "Có thể diễn đạt lời khuyên hoặc mong muốn rằng một việc sẽ xảy ra tốt đẹp; cách hiểu phụ thuộc vào ngữ cảnh.",
+      "forms": ["Vた + らいいです", "V辞書形 / Vない形 + といいです"],
+      "usageNotes": [
+        "〜たらいい thường dùng để hỏi hoặc đưa ra lời khuyên, như cấu trúc hỏi nên làm thế nào.",
+        "〜といい thường diễn đạt hy vọng hoặc mong muốn một kết quả."
+      ],
+      "sourceUrl": "https://han-nichi.vercel.app/grammar/minna-2-n4/lesson-26"
+    }
+  ],
+  "vocabulary": [],
+  "notes": [
+    "Đây là bản tóm lược có cấu trúc từ nội dung hiển thị của trang; phần diễn giải tiếng Việt được viết lại ngắn gọn.",
+    "Trang bài 26 này hiển thị các mục ngữ pháp, không thấy mục từ vựng riêng trong nội dung đã đọc.",
+    "Ví dụ Nhật–Việt trên trang được để lại ở nguồn và chưa sao chép vào tệp này."
+  ]
+}
